@@ -12,11 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * @author Sergiy Levchynskyi.
@@ -65,7 +62,7 @@ public class GitlabRequestProcessor {
                 jiraIssues.put(issue, commitUrl);
             }
         }
-        jiraIssueLinkCreator.addLinkToIssue(jiraIssues);
+        jiraIssueLinkCreator.addLinksToIssue(jiraIssues);
         LOGGER.info(jiraIssues);
     }
 
